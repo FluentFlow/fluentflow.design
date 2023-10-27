@@ -1,0 +1,48 @@
+<section class="">
+  <h2 class="text-3xl font-bold p-8">О нас</h2>
+  <div class="p-8 bg-neutral shadow-lg text-base-100 rounded-3xl w-full-md">
+
+    <app-adaptive-text title="Профессионализм">
+      <p>
+        Мы - команда профессионалов, специализирующихся на создании
+        элегантных и гармоничных дизайнов. Наша студия предлагает широкий спектр
+        услуг, включая веб-дизайн, графический дизайн, разработку логотипов и
+        многое другое.
+      </p>
+    </app-adaptive-text>
+
+    <app-adaptive-text title="Уникальный подход">
+      <p>
+        Мы стремимся создавать уникальные и оригинальные дизайны, которые
+        отражают индивидуальность и цели каждого клиента. Наша команда работает
+        тесно с клиентами, чтобы понять их потребности и создать дизайн, который
+        наилучшим образом соответствует их бренду и ценностям.
+      </p>
+    </app-adaptive-text>
+
+    <h3 class="text-2xl mb-4">Наша команда</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      <div
+        *ngFor="let teamMember of teamMembers"
+        class="card card-side ring-1 mb-4 mr-4 px-4"
+      >
+        <div class="avatar">
+          <div class=" w-24 mask mask-circle">
+            <img class="translate-y-4" [src]="teamMember.image" />
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h4 class="card-title">{{ teamMember.name }}</h4>
+          <p>{{ teamMember.role }}</p>
+          <app-icons-panel
+            [vk]="teamMember.icons.vk"
+            [telegram]="teamMember.icons.telegram"
+            [github]="teamMember.icons.github"
+            [behance]="teamMember.icons.behance"
+          ></app-icons-panel>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

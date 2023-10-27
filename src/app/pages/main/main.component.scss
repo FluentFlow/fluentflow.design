@@ -1,0 +1,8 @@
+.background-abs1 {
+  background-image: url('../../../assets/images/abs1.png');
+  background-repeat: no-repeat;
+  @media (min-width: 768px)
+  {
+    background-image: none;
+  }
+}

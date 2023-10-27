@@ -1,0 +1,17 @@
+<div class="card ring-1 rounded">
+  <img class="rounded p-4" [src]="image" alt="{{ id }}" />
+
+  <div class="card-body">
+    <h2 class="card-title pb-4">{{ title }}</h2>
+    <p>{{ description }}</p>
+    <div class="card-actions">
+      <a
+        [href]="link.url"
+        class="text-lg link link-primary flex justify-center h-full"
+        target="_blank"
+      >
+        {{ link.text }}
+      </a>
+    </div>
+  </div>
+</div>

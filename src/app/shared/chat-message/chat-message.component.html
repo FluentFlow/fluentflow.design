@@ -1,0 +1,16 @@
+<div
+  class="chat"
+  [ngClass]="{
+    'chat-start': direction === 'start',
+    'chat-end': direction === 'end'
+  }"
+>
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img [src]="image" />
+    </div>
+  </div>
+  <div class="chat-bubble" [ngClass]="{'bg-no-repeat': background}" [style.background-image]="'url(' + background + ')'">
+    <ng-content></ng-content>
+  </div>
+</div>

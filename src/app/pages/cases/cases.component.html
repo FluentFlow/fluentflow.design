@@ -1,0 +1,20 @@
+<div class="breadcrumbs p-6">
+  <ul>
+    <li><a routerLink="/">Главная</a></li>
+    <li><a routerLink="/cases">Кейсы</a></li>
+  </ul>
+</div>
+<section class="p-6">
+  <div
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+  >
+    <app-case-card
+      *ngFor="let case of Cases"
+      [id]="case.id"
+      [title]="case.name"
+      [description]="case.description"
+      [image]="case.image"
+      [link]="case.link"
+    ></app-case-card>
+  </div>
+</section>
