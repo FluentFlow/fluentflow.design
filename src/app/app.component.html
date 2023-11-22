@@ -2,28 +2,18 @@
 <router-outlet></router-outlet>
 <app-footer>
   <nav class="grid grid-flow-col gap-8">
-    <a
-      href="https://vk.com/fluentflow"
-      class="link link-hover bg-neutral rounded-full p-4 flex justify-center items-center text-primary"
-      target="_blank"
-    >
+    <!-- VK -->
+    <app-external-link src="https://vk.com/fluentflow">
       <app-vk-icon></app-vk-icon>
-    </a>
-
-    <a
-      href="https://t.me/fluentflowdesign"
-      class="link link-hover bg-neutral indicator rounded-full p-4 flex justify-center items-center text-primary"
-      target="_blank"
-    >
-      <span class="indicator-item badge badge-accent">Новое</span>
+    </app-external-link>
+    <!-- Telegram -->
+    <app-external-link src="https://t.me/fluentflowdesign">
       <app-telegram-icon></app-telegram-icon>
-    </a>
-
-    <span
-      title="GitHub"
-      class="bg-neutral rounded-full p-4 flex justify-center items-center text-primary"
-    >
-      GitHub
-    </span>
+    </app-external-link>
+    <!-- GitHub -->
+    <app-external-link src="https://github.com/fluentflow/fluentflow.design">
+      <app-github-icon></app-github-icon>
+    </app-external-link>
+    <!-- TODO: Behance, Dribbble, Pinterest -->
   </nav>
 </app-footer>
