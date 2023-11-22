@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-section + section{
-  margin-bottom: 2rem;
+section{
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
