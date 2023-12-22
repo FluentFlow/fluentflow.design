@@ -6,9 +6,10 @@ import { IconsModule } from './icons/icons.module';
 import { LayoutModule } from './layout/layout.module';
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { TailoringB2bComponent } from './pages/tailoring-b2b/tailoring-b2b.component';
 
 @NgModule({
-  declarations: [AppComponent, NotFoundComponent],
+  declarations: [AppComponent, NotFoundComponent, TailoringB2bComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
