@@ -7,6 +7,7 @@ import { AdaptiveTextComponent } from './adaptive-text/adaptive-text.component';
 import { ExternalLinkComponent } from './external-link/external-link.component';
 import { IconsModule } from '../icons/icons.module';
 import { CollapseComponent } from './collapse/collapse.component';
+import { TitledBoxComponent } from './titled-box/titled-box.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CollapseComponent } from './collapse/collapse.component';
     AdaptiveTextComponent,
     ExternalLinkComponent,
     CollapseComponent,
+    TitledBoxComponent,
   ],
   imports: [CommonModule, IconsModule],
   exports: [
@@ -24,6 +26,7 @@ import { CollapseComponent } from './collapse/collapse.component';
     AdaptiveTextComponent,
     ExternalLinkComponent,
     CollapseComponent,
+    TitledBoxComponent
   ],
 })
 export class SharedModule {}
