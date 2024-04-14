@@ -1,29 +1,12 @@
 <section class="container mx-auto">
-  <app-titled-box title="О нас">
-    
-    <app-adaptive-text title="Профессионализм">
-      <p>
-        Мы - команда профессионалов, специализирующихся на
-        <span class="underline">создании элегантных и гармоничных дизайнов</span
-        >. Наша студия предлагает широкий спектр услуг, включая веб-дизайн,
-        графический дизайн, разработку логотипов и многое другое.
-      </p>
-    </app-adaptive-text>
+  
+  <h3 class="text-3xl font-bold">🐱‍👤 Наша команда</h3>
 
-    <app-adaptive-text title="Уникальный подход">
-      <p>
-        Мы стремимся создавать уникальные и оригинальные дизайны, которые
-        отражают индивидуальность и цели каждого клиента. Наша команда работает
-        тесно с клиентами, чтобы понять их потребности и создать дизайн, который
-        наилучшим образом соответствует их бренду и ценностям.
-      </p>
-    </app-adaptive-text>
-
-    <h3 class="text-2xl mb-4">Наша команда</h3>
-    <div class="pb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+  <div class="my-8 text-base-100 w-full-md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
       <div
         *ngFor="let teamMember of teamMembers"
-        class="card card-side ring-1 mb-4 mr-4 px-4"
+        class="group card card-side ring-1 px-4 bg-primary hover:bg-base-100 easy-in-out duration-500"
       >
         <div class="avatar">
           <div class="w-24 mask mask-circle">
@@ -31,7 +14,7 @@
           </div>
         </div>
 
-        <div class="card-body">
+        <div class="card-body text-base-100 group-hover:text-primary group-hover:transition-all">
           <h4 class="card-title">{{ teamMember.name }}</h4>
           <p>{{ teamMember.role }}</p>
           <app-icons-panel
@@ -44,14 +27,6 @@
       </div>
     </div>
 
-    <div class="mockup-browser bg-primary">
-      <div class="mockup-browser-toolbar text-black">
-        <div class="input">https://fluentflow.design</div>
-      </div>
-      <div class="flex justify-center px-4 py-16 bg-base-100">
-        <app-brand-banner></app-brand-banner>
-      </div>
-    </div>
 
-  </app-titled-box>
+  </div>
 </section>

@@ -7,7 +7,8 @@ import { AdaptiveTextComponent } from './adaptive-text/adaptive-text.component';
 import { ExternalLinkComponent } from './external-link/external-link.component';
 import { IconsModule } from '../icons/icons.module';
 import { CollapseComponent } from './collapse/collapse.component';
-import { TitledBoxComponent } from './titled-box/titled-box.component';
+import { BusinessProcessViewComponent } from './business-process-view/business-process-view.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TitledBoxComponent } from './titled-box/titled-box.component';
     AdaptiveTextComponent,
     ExternalLinkComponent,
     CollapseComponent,
-    TitledBoxComponent,
+    BusinessProcessViewComponent,
+    CarouselComponent,
   ],
   imports: [CommonModule, IconsModule],
   exports: [
@@ -26,7 +28,8 @@ import { TitledBoxComponent } from './titled-box/titled-box.component';
     AdaptiveTextComponent,
     ExternalLinkComponent,
     CollapseComponent,
-    TitledBoxComponent
+    BusinessProcessViewComponent,
+    CarouselComponent,
   ],
 })
 export class SharedModule {}

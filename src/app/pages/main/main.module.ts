@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MainComponent } from './main.component';
 import { AboutComponent } from './sections/about/about.component';
-import { ContactUsComponent } from './sections/contact-us/contact-us.component';
 import { ServicesComponent } from './sections/services/services.component';
 
 @Component({
@@ -18,7 +17,6 @@ class ResitasRedirectComponent {
 @NgModule({
   declarations: [
     AboutComponent,
-    ContactUsComponent,
     MainComponent,
     ServicesComponent,
   ],

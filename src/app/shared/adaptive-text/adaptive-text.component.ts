@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./adaptive-text.component.scss']
 })
 export class AdaptiveTextComponent {
-  @Input() title!: string;
+  @Input() title!: string; 
 }
