@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { TailoringB2bComponent } from './pages/tailoring-b2b/tailoring-b2b.component';
+import { NotFoundComponent } from './modules/not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./pages/main/main.module').then((m) => m.MainModule),
+    loadChildren: () => import('./modules/main/main.module').then((m) => m.MainModule),
   },
   {
     path: 'cases',
-    loadChildren: () =>
-      import('./pages/cases/cases.module').then((m) => m.CasesModule),
+    loadChildren: () => import('./modules/cases/cases.module').then((m) => m.CasesModule),
   },
-  { path: 'tailoring-b2b', component: TailoringB2bComponent },
+  {
+    path: 'tailoring-b2b',
+    loadChildren: () => import('./modules/b2b-tailoring/b2b-tailoring.module').then(m => m.B2bTailoringModule)
+  },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 ];

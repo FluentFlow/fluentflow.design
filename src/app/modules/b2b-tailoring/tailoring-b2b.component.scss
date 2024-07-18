@@ -1,0 +1,16 @@
+swiper-slide{
+    margin-bottom: 2rem;
+    
+}
+
+.feature{
+    @apply flex;
+    @apply container;
+    @apply py-16;
+}
+
+.h3-title{
+    @apply text-2xl;
+    @apply py-4;
+    @apply text-left;
+}

@@ -1,0 +1,53 @@
+<section class="container m-auto">
+  <h1 class="text-4xl font-bold py-4">Пошив мягких игрушек для бизнеса</h1>
+  <swiper-container #swiperRef swiperElement [config]="config">
+    <swiper-slide *ngFor="let slide of slides" class="slide w-full">
+      <img
+        class="object-cover pb-4"
+        width="440"
+        height="550"
+        style="height: 27rem !important"
+        [src]="slide.imageUrl"
+        [alt]="slide.title"
+      />
+      <caption class="w-full text-center inline-block select-none">
+        {{
+          slide.title
+        }}
+      </caption>
+    </swiper-slide>
+  </swiper-container>
+  <div class="swiper-scrollbar"></div>
+</section>
+
+<section class="hero">
+  <div class="feature">
+    <div class="w-1/2">
+      <h3 class="h3-title">Сувернирная продукция</h3>
+    </div>
+    <div class="w-1/2">
+      <label>Мы делаем сувенирную продукцию в виде мягких игрушек.</label>
+      <ul class="list-dist">
+        <li>Партии от 10 штук.</li>
+        <li>Предоставляем прототип за 7 дней с момента первого контакта.</li>
+        <li>Конкурентные цены.</li>
+        <li>Эскиз будущего изделия бесплатно.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="feature stroke-base-200 border-t-2">
+    <div class="w-1/2">
+      <h3 class="h3-title">Звуковые модули</h3>
+    </div>
+    <div class="w-1/2">
+      <p class="py-2">Как сделать так, чтобы твоя продукция запомнилась?</p>
+      <p class="py-2">
+        Добавь ей голос! Короткий слоган (15секунд) или громкий смех?
+      </p>
+      <p class="py-2">Прояви фантазию!</p>
+    </div>
+  </div>
+</section>
