@@ -4,7 +4,11 @@ module.exports = {
     './src/**/*.{html,js}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'b2b-tailoring': "url('/assets/images/no text.jpg')",
+      }
+    },
   },
   daisyui: {
     themes: [

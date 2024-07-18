@@ -53,7 +53,7 @@ export class TailoringB2bComponent {
 
   public config: SwiperOptions = {
     slidesPerView: 1,
-    spaceBetween: 25,
+    spaceBetween: 32,
     breakpoints: {
       320: {
         slidesPerView: 1.0,
@@ -68,17 +68,7 @@ export class TailoringB2bComponent {
         slidesPerView: 4.0,
       },
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      enabled: true,
-      draggable: true
-    },
     observer: true,
     observeParents: true,
-    parallax:true,
   }
 }

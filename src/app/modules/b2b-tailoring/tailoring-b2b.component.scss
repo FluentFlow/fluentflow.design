@@ -6,11 +6,17 @@ swiper-slide{
 .feature{
     @apply flex;
     @apply container;
-    @apply py-16;
+    @apply max-w-7xl;
+    @apply border-t-2;
+    @apply stroke-base-200;
+    @apply pt-4;
 }
 
 .h3-title{
     @apply text-2xl;
-    @apply py-4;
     @apply text-left;
+}
+
+section{
+    @apply my-40;
 }
