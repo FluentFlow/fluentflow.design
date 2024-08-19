@@ -4,9 +4,10 @@ import { TailoringB2bComponent } from './tailoring-b2b.component';
 import { RouterModule } from '@angular/router';
 import { DirectivesModule } from 'src/app/directives/directives.module';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
-  declarations: [TailoringB2bComponent, CalculatorComponent],
+  declarations: [TailoringB2bComponent, CalculatorComponent, OrderComponent],
   exports: [],
   imports: [
     CommonModule,

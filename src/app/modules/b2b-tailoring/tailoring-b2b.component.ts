@@ -15,8 +15,8 @@ export class TailoringB2bComponent {
   swiper?: Swiper;
   @ViewChild('swiperRef')
   swiperRef: ElementRef | undefined;
-  
-  slides: Array<{title: string, imageUrl: string}> = [
+
+  slides: Array<{ title: string, imageUrl: string }> = [
     {
       title: "Резитас",
       imageUrl: "https://s3.timeweb.cloud/1daee0b6-4b362c06-45a2-4fa0-b1aa-f30cd02cde29/fluentflow.design/images/cases/1.jpg"
@@ -45,6 +45,12 @@ export class TailoringB2bComponent {
       title: "Птички!",
       imageUrl: "https://s3.timeweb.cloud/1daee0b6-4b362c06-45a2-4fa0-b1aa-f30cd02cde29/fluentflow.design/images/cases/7.jpg"
     }
+  ]
+
+  steps: Array<{ title: string, content: string }> = [
+    { title: "Вы присылаете фото", content: "Мы бесплатно поможем Вам разработать концепт игрушки и просчитаем стоимость и сроки изготовления" },
+    { title: "Оплата", content: "Мы закупаем материалы и делаем одну штуку штуку готовой продукции. На этом этапе мы вносим последние правки по вашим замечаниям, если такие есть." },
+    { title: "Доставка", content: "Мы доделываем партию и отправляем вам любым удобным Вам способом (почта России, СДЭК, пр.) Если вы находитесь в пределах Санкт-Петербурга, то привезём лично." }
   ]
 
   ngAfterViewInit() {

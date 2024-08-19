@@ -1,9 +1,9 @@
 <header class="navbar bg-base-200">
   <div class="container mx-auto">
-    <div class="navbar-start flex">
+    <div class="navbar-start flex items-center gap-4">
       <!-- Меню -->
       <div class="dropdown" [class.open]="dropdownOpen">
-        <label tabindex="0" class="btn btn-ghost" (click)="toggleDropdown()">
+        <label class="flex items-center gap-1" tabindex="0" (click)="toggleDropdown()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -34,14 +34,10 @@
           </li>
         </ul>
       </div>
+      <!-- Главная -->
+      <a routerLink="/">Главная</a>
       <!-- Пошив мерча -->
-      <a routerLink="/tailoring-b2b" class="btn btn-ghost">Пошив мерча</a>
+      <a routerLink="/tailoring-b2b">Пошив мерча</a>
     </div>
-    <div class="navbar-center flex">
-      <a routerLink="/" class="btn btn-ghost normal-case text-xl"
-        >Fluent Flow</a
-      >
-    </div>
-    <div class="navbar-end"></div>
   </div>
 </header>
