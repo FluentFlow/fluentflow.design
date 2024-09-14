@@ -1,9 +1,26 @@
-<header class="navbar bg-base-200">
+<div class="container mx-auto text-right">
+  <span>ВК: </span>
+  <a href="https://vk.com/fluentflow.merch"
+     target="_blank"
+     class="btn btn-info m-2 text-secondary"
+    >Мерч</a>
+  <span>Telegram: </span>
+  <a href="https://t.me/fluentflow"
+     target="_blank"
+     class="btn btn-info m-2 text-secondary"
+    >@fluentflow</a>
+</div>
+
+<div class="navbar bg-base-200">
   <div class="container mx-auto">
-    <div class="navbar-start flex items-center gap-4">
+    <div class="navbar-start flex items-center gap-4 pl-2">
       <!-- Меню -->
       <div class="dropdown" [class.open]="dropdownOpen">
-        <label class="flex items-center gap-1" tabindex="0" (click)="toggleDropdown()">
+        <label
+          class="flex items-center gap-1"
+          tabindex="0"
+          (click)="toggleDropdown()"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -40,4 +57,4 @@
       <a routerLink="/tailoring-b2b">Пошив мерча</a>
     </div>
   </div>
-</header>
+</div>

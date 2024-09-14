@@ -1,9 +1,9 @@
 <section class="container mx-auto">
-  <h1 class="text-5xl font-bold pb-16">Пошив мягких игрушек для бизнеса</h1>
+  <h1 class="h1-title">Пошив мягких игрушек для бизнеса</h1>
   <swiper-container #swiperRef swiperElement [config]="config">
     <swiper-slide *ngFor="let slide of slides" class="slide w-full">
       <img
-        class="object-cover pb-4"
+        class="object-cover pb-4 pl-4"
         width="440"
         height="550"
         style="height: 27rem !important"
@@ -27,12 +27,10 @@
       </div>
       <div class="w-1/2">
         <ul class="list-disc">
-          <li class="py-2">Партии от 10 штук.</li>
-          <li class="py-2">
-            Предоставляем прототип за 7 дней с момента первого контакта.
-          </li>
-          <li class="py-2">Конкурентные цены.</li>
-          <li class="py-2">Эскиз будущего изделия бесплатно.</li>
+          <li>Партии от 10 штук.</li>
+          <li>Предоставляем прототип за 7 дней с момента первого контакта.</li>
+          <li>Конкурентные цены.</li>
+          <li>Эскиз будущего изделия бесплатно.</li>
         </ul>
       </div>
     </div>
@@ -41,24 +39,30 @@
         <h3 class="h3-title">Звуковые модули</h3>
       </div>
       <div class="w-1/2">
-        <p class="py-2">Как сделать так, чтобы твоя продукция запомнилась?</p>
-        <p class="py-2">
+        <p class="pb-4">Как сделать так, чтобы твоя продукция запомнилась?</p>
+        <p class="pb-4">
           Добавь ей голос! Короткий слоган (15секунд) или громкий смех?
         </p>
-        <p class="py-2">Прояви фантазию!</p>
+        <p>Прояви фантазию!</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="min-[320px]:flex min-[320px]:flex-col-reverse md:grid md:grid-cols-2">
+<section
+  class="mobile:flex mobile:flex-col-reverse laptop:grid laptop:grid-cols-2"
+>
   <app-order></app-order>
-  <div class="flex flex-col self-center min-[320px]:p-4 md:pr-24 sm:order-last">
+  <div
+    class="flex flex-col self-center mobile:p-4 laptop:pr-24 mobile:order-last"
+  >
     <div *ngFor="let step of steps; index as i" class="flex flex-row pb-8">
-      <span class="pr-8 content-center min-[320px]:hidden">{{ i + 1 }}</span>
+      <span class="p-4 mr-8 content-center mobile:hidden desktop:inline mask mask-hexagon bg-base-200">{{
+        i + 1
+      }}</span>
       <div class="">
-        <h3 class="pb-2 text-2xl">{{step.title}}</h3>
-        <p class="">{{step.content}}</p>
+        <h3 class="h3-title pb-4">{{ step.title }}</h3>
+        <p>{{ step.content }}</p>
       </div>
     </div>
   </div>

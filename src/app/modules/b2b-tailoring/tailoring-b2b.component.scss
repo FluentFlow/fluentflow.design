@@ -1,3 +1,7 @@
+li{
+    @apply pb-4;
+}
+
 swiper-slide{
     margin-bottom: 2rem;
 }
@@ -11,11 +15,40 @@ swiper-slide{
     @apply pt-4;
 }
 
+.h1-title{
+    @apply font-bold;
+    @apply text-xl;
+    @apply px-4;
+    @apply py-6;
+}
+
+.h2-title{
+    @apply font-bold;
+}
+
 .h3-title{
     @apply text-2xl;
     @apply text-left;
 }
 
-section{
-    @apply my-32;
+
+@screen laptop {
+    .h1-title{
+        @apply text-3xl;
+    }
 }
+
+@screen desktop {
+    .h1-title{
+        @apply text-5xl;
+        @apply pb-16;
+    }
+
+    section{
+        @apply my-32;
+    }
+}
+
+
+
+

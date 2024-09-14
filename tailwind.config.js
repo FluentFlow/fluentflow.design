@@ -9,6 +9,11 @@ module.exports = {
         'b2b-tailoring': "url('/assets/images/no text.jpg')",
       }
     },
+    screens: {
+      'mobile': '320px',
+      'laptop': '1024px',
+      'desktop': '1280px'
+    }
   },
   daisyui: {
     themes: [
