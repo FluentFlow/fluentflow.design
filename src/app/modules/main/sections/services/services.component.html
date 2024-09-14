@@ -1,27 +1,26 @@
 <section class="container mx-auto">
   <div class="my-8 p-8 bg-primary shadow-lg text-base-100 rounded-3xl w-full-md">
-
-    <h3 class="text-3xl font-bold m-4">Услуги</h3>
-
-    <div class="grid grid-cols-3 sm:grid-cols-1">
+    <h2 class="text-3xl font-bold m-4">Услуги</h2>
+    <div class="grid grid-cols-1 laptop:grid-cols-2">
       <!-- Дизайн и UI\UX -->
-      <app-collapse title="🖥 Дизайн и UI\UX" tag="services">
+       <div class="p-2 hover:bg-secondary hover:text-primary rounded easy-in-out duration-300">
+        <h3 class="text-2xl">🖥 Дизайн интерфейсов</h3>
         <ul class="list-disc p-4">
           <li>Дизайн веб и мобильных приложений</li>
-          <li>Консультирование по UI\UX</li>
           <li>Разработка дизайн-систем</li>
           <li>Айдентика и создание логотипов</li>
+          <li>Консультирование по UI\UX</li>
         </ul>
-      </app-collapse>
-      
+      </div>
       <!-- Мир вещей -->
-      <app-collapse title="🎨 Мир вещей" tag="services">
+      <div class="p-2 hover:bg-secondary hover:text-primary rounded easy-in-out duration-300">
+        <h3 class="text-2xl">🎨 Мир вещей</h3>
         <ul class="list-disc p-4">
           <li>Дизайн и пошив изделий под ключ</li>
           <li>Мелкосерийное изготовление игрушек</li>
           <li>Мерч для музыкальных групп</li>
         </ul>
-      </app-collapse>
+      </div>
     </div>
   </div>
 </section>
