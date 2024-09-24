@@ -13,7 +13,15 @@ module.exports = {
       'mobile': '320px',
       'laptop': '1024px',
       'desktop': '1280px'
-    }
+    },
+    container: {
+      padding: '2rem',
+      screens: {
+        'mobile': '320px',
+        'laptop': '1024px',
+        'desktop': '1900px'
+      }
+    },
   },
   daisyui: {
     themes: [

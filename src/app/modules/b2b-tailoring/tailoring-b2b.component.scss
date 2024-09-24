@@ -17,6 +17,12 @@ section{
     @apply to-success;
 }
 
+.bg-peasant-gradient{
+    @apply bg-gradient-to-r; 
+    @apply from-success; 
+    @apply to-secondary;
+}
+
 h1,h2,h3{
     @apply px-4;
     @apply py-2;
@@ -36,6 +42,10 @@ h2{
 h3{
     @apply text-2xl;
     @apply text-left;
+}
+
+.stat-desc{
+    @apply pt-2;
 }
 
 
