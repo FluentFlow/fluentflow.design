@@ -6,47 +6,52 @@ swiper-slide{
     margin-bottom: 2rem;
 }
 
-.feature{
-    @apply flex;
-    @apply container;
-    @apply max-w-7xl;
-    @apply border-t-2;
-    @apply stroke-base-200;
-    @apply pt-4;
+section{
+    @apply py-8;
+    
 }
 
-.h1-title{
-    @apply font-bold;
-    @apply text-xl;
+.bg-king-gradient{
+    @apply bg-gradient-to-r; 
+    @apply from-secondary; 
+    @apply to-success;
+}
+
+h1,h2,h3{
     @apply px-4;
+    @apply py-2;
+}
+
+h1{
+    @apply font-bold;
+    @apply text-3xl;
     @apply py-6;
 }
 
-.h2-title{
+h2{
     @apply font-bold;
+    @apply text-2xl;
 }
 
-.h3-title{
+h3{
     @apply text-2xl;
     @apply text-left;
 }
 
 
 @screen laptop {
-    .h1-title{
+    h1{
         @apply text-3xl;
     }
 }
 
 @screen desktop {
-    .h1-title{
+    h1{
         @apply text-5xl;
         @apply pb-16;
     }
 
-    section{
-        @apply my-32;
-    }
+    
 }
 
 

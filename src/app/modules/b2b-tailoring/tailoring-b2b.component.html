@@ -1,50 +1,60 @@
-<section class="container mx-auto">
-  <h1 class="h1-title">Пошив мягких игрушек для бизнеса</h1>
-  <swiper-container #swiperRef swiperElement [config]="config">
-    <swiper-slide *ngFor="let slide of slides" class="slide w-full">
-      <img
-        class="object-cover pb-4 pl-4"
-        width="440"
-        height="550"
-        style="height: 27rem !important"
-        [src]="slide.imageUrl"
-        [alt]="slide.title"
-      />
-      <caption class="w-full text-center inline-block select-none">
-        {{
-          slide.title
-        }}
-      </caption>
-    </swiper-slide>
-  </swiper-container>
+<section class="bg-gradient-to-r from-secondary to-success">
+  <div id="content-wrapper" class="laptop:container mx-auto">
+    <h1>Пошив мягких игрушек на заказ</h1>
+    <h2>Работы</h2>
+    <swiper-container #swiperRef swiperElement [config]="config">
+      <swiper-slide *ngFor="let slide of slides" class="slide w-full">
+        <img
+          class="object-cover p-4 laptop:py-4 laptop:px-4"
+          width="440"
+          height="550"
+          style="height: 27rem !important"
+          [src]="slide.imageUrl"
+          [alt]="slide.title"
+        />
+        <caption class="w-full text-center inline-block select-none">
+          {{
+            slide.title
+          }}
+        </caption>
+      </swiper-slide>
+    </swiper-container>
+  </div>
 </section>
 
-<section class="bg-b2b-tailoring bg-cover h-lvh flex flex-wrap content-center">
-  <div class="flex flex-col flex-grow items-center gap-8">
-    <div class="feature">
-      <div class="w-1/2">
-        <h3 class="h3-title">Сувернирная продукция</h3>
-      </div>
-      <div class="w-1/2">
-        <ul class="list-disc">
-          <li>Партии от 10 штук.</li>
-          <li>Предоставляем прототип за 7 дней с момента первого контакта.</li>
-          <li>Конкурентные цены.</li>
-          <li>Эскиз будущего изделия бесплатно.</li>
-        </ul>
+<section
+  class="bg-b2b-tailoring bg-cover laptop:content-center laptop:text-center laptop:h-svh"
+>
+  <h2>Звуковые модули</h2>
+  <p>Как сделать так, чтобы твоя продукция запомнилась?</p>
+  <p>Добавь ей голос или короткий слоган!</p>
+</section>
+
+<section
+  class="hero overflow-hidden bg-gradient-to-r from-success to-secondary"
+>
+  <div class="stats stats-vertical laptop:stats-horizontal laptop:shadow">
+    <div class="stat">
+      <div class="stat-title">Минимальный заказ</div>
+      <div class="stat-value">10 штук</div>
+      <div class="stat-desc">Партии от 10 штук.</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Бесплатный прототип</div>
+      <div class="stat-value">за 7 дней</div>
+      <div class="stat-desc">
+        Предоставляем прототип за 7 дней с момента первого звонка.
       </div>
     </div>
-    <div class="feature">
-      <div class="w-1/2">
-        <h3 class="h3-title">Звуковые модули</h3>
-      </div>
-      <div class="w-1/2">
-        <p class="pb-4">Как сделать так, чтобы твоя продукция запомнилась?</p>
-        <p class="pb-4">
-          Добавь ей голос! Короткий слоган (15секунд) или громкий смех?
-        </p>
-        <p>Прояви фантазию!</p>
-      </div>
+    <div class="stat">
+      <div class="stat-title">Скидка</div>
+      <div class="stat-value">до 15%</div>
+      <div class="stat-desc">Выгодные цены на продукцию и скидки за объём.</div>
+    </div>
+    <div class="stat laptop:hidden">
+      <div class="stat-title">Цена</div>
+      <div class="stat-value">0 ₽</div>
+      <div class="stat-desc">Эскиз будущего изделия бесплатно.</div>
     </div>
   </div>
 </section>
@@ -56,14 +66,13 @@
   <div
     class="flex flex-col self-center mobile:p-4 laptop:pr-24 mobile:order-last"
   >
-    <div *ngFor="let step of steps; index as i" class="flex flex-row pb-8">
-      <span class="p-4 mr-8 content-center mobile:hidden desktop:inline mask mask-hexagon bg-base-200">{{
+    <div *ngFor="let step of steps; index as i" class="flex flex-row items-baseline mb-4 hover:bg-black hover:rounded hover:text-secondary group">
+      <span class="hidden desktop:inline content-center mask mask-hexagon p-4 mx-2 bg-info text-secondary text-bold group-hover:bg-success group-hover:text-primary">{{
         i + 1
       }}</span>
-      <div class="">
-        <h3 class="h3-title pb-4">{{ step.title }}</h3>
-        <p>{{ step.content }}</p>
-      </div>
+      <h3 class="mr-2">{{ step.title }}</h3>
+      <p class="text-center py-4">{{ step.content }}</p>
+      
     </div>
   </div>
 </section>

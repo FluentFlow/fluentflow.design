@@ -1,20 +1,23 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { Swiper } from 'swiper';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { A11y } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
+import { interval, Subscription } from 'rxjs';
 
-Swiper.use([Navigation, Pagination, Scrollbar, A11y]);
+Swiper.use([A11y]);
 
 @Component({
   selector: 'app-tailoring-b2b',
   templateUrl: './tailoring-b2b.component.html',
   styleUrls: ['./tailoring-b2b.component.scss']
 })
-export class TailoringB2bComponent {
+export class TailoringB2bComponent implements OnDestroy {
   title = 'swiper-tutorial';
   swiper?: Swiper;
   @ViewChild('swiperRef')
   swiperRef: ElementRef | undefined;
+
+  private swiperSubscription: Subscription | null = null;
 
   slides: Array<{ title: string, imageUrl: string }> = [
     {
@@ -48,30 +51,44 @@ export class TailoringB2bComponent {
   ]
 
   steps: Array<{ title: string, content: string }> = [
-    { title: "Фото", content: "Мы бесплатно поможем Вам разработать концепт игрушки и просчитаем стоимость и сроки изготовления" },
-    { title: "Оплата", content: "Мы закупаем материалы и делаем одну штуку штуку готовой продукции. На этом этапе мы вносим последние правки по вашим замечаниям, если такие есть." },
-    { title: "Доставка", content: "Мы доделываем партию и отправляем вам любым удобным Вам способом (почта России, СДЭК, пр.) Если вы находитесь в пределах Санкт-Петербурга, то привезём лично." }
+    { title: "Эскиз", content: "Бесплатно разработаем концепт игрушки; посчитаем стоимость и сроки изготовления." },
+    { title: "Прототип", content: "Мы производим демонастрационный прототип готовой продукции." },
+    { title: "Правки", content: "На этом этапе мы вносим последние правки по вашим замечаниям, если такие есть." },
+    { title: "Доставка", content: "Отправка по России через почту или СДЭК. В пределах Санкт-Петербурга - лично." }
   ]
 
   ngAfterViewInit() {
     this.swiper = this.swiperRef?.nativeElement.swiper;
+
+    // hack for swiper loop
+    this.swiperSubscription = interval(3000)
+      .subscribe(() => {
+        if (this.swiper?.activeIndex === 3) {
+          return this.swiper?.slideTo(0);
+        }
+        return this.swiper?.slideNext();
+      });
+  }
+
+  ngOnDestroy() {
+    this.swiperSubscription?.unsubscribe();
   }
 
   public config: SwiperOptions = {
     slidesPerView: 1,
-    spaceBetween: 4,
+    spaceBetween: 0,
     breakpoints: {
       320: {
         slidesPerView: 1.0,
       },
       1024: {
-        slidesPerView: 3.0,
+        slidesPerView: 4.0,
       },
       1280: {
         slidesPerView: 4.0,
       },
     },
     observer: true,
-    observeParents: true,
+    observeParents: true
   }
 }
