@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'tailoring-b2b',
     loadChildren: () => import('./modules/b2b-tailoring/b2b-tailoring.module').then(m => m.B2bTailoringModule)
   },
+  {
+    path: 'team',
+    loadChildren: () => import('./modules/team/team.module').then(m => m.TeamModule)
+  },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 ];

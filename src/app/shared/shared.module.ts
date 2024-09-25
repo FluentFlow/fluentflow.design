@@ -9,27 +9,33 @@ import { IconsModule } from '../icons/icons.module';
 import { CollapseComponent } from './collapse/collapse.component';
 import { BusinessProcessViewComponent } from './business-process-view/business-process-view.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
-    IconsPanelComponent,
-    BrandBannerComponent,
-    ChatMessageComponent,
+    AboutComponent,
     AdaptiveTextComponent,
-    ExternalLinkComponent,
-    CollapseComponent,
+    BrandBannerComponent,
     BusinessProcessViewComponent,
     CarouselComponent,
+    ChatMessageComponent,
+    CollapseComponent,
+    ExternalLinkComponent,
+    IconsPanelComponent,
+    ServicesComponent,
   ],
   imports: [CommonModule, IconsModule],
   exports: [
-    IconsPanelComponent,
-    BrandBannerComponent,
+    AboutComponent,
     AdaptiveTextComponent,
-    ExternalLinkComponent,
-    CollapseComponent,
+    BrandBannerComponent,
     BusinessProcessViewComponent,
     CarouselComponent,
+    CollapseComponent,
+    ExternalLinkComponent,
+    IconsPanelComponent,
+    ServicesComponent,
   ],
 })
-export class SharedModule {}
+export class SharedModule { }

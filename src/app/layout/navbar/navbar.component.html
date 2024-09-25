@@ -1,4 +1,4 @@
-<div class="container mx-auto text-right">
+<div class="laptop:container laptop:mx-auto text-right">
   <span class="text-primary">ВК: </span>
   <a
     href="https://vk.com/fluentflow.merch"
@@ -16,8 +16,8 @@
 </div>
 
 <div class="navbar bg-base-200">
-  <div class="container mx-auto">
-    <div class="navbar-start flex items-center gap-4 pl-2">
+  <div class="laptop:container laptop:mx-auto pl-2">
+    <div class="navbar-start flex gap-2">
       <!-- Меню -->
       <div class="dropdown" [class.open]="dropdownOpen">
         <label
@@ -53,12 +53,13 @@
               >Пошив игрушек на заказ</a
             >
           </li>
+          <li><a routerLink="/team" (click)="closeDropdown()">О команде (в разработке)</a></li>
         </ul>
       </div>
       <!-- Главная -->
-      <a routerLink="/">Главная</a>
+      <a class="hover:bg-secondary p-2 rounded" routerLink="/">Главная</a>
       <!-- Пошив мерча -->
-      <a routerLink="/tailoring-b2b">Мерч</a>
+      <a class="hover:bg-secondary p-2 rounded" routerLink="/tailoring-b2b">Мерч</a>
     </div>
   </div>
 </div>

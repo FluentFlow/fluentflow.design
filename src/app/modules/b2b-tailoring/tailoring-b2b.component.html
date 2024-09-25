@@ -3,16 +3,19 @@
     <h1>Пошив мягких игрушек на заказ</h1>
     <h2>Работы</h2>
     <swiper-container #swiperRef swiperElement [config]="config">
-      <swiper-slide *ngFor="let slide of slides" class="slide w-full">
+      <swiper-slide
+        *ngFor="let slide of slides"
+        class="slide w-full p-4 laptop:py-4 laptop:px-4"
+      >
         <img
-          class="object-cover p-4 laptop:py-4 laptop:px-4"
-          width="440"
-          height="550"
-          style="height: 27rem !important"
+          class="object-cover shadow"
+          width="600"
+          height="750"
+          style="height: 45rem !important"
           [src]="slide.imageUrl"
           [alt]="slide.title"
         />
-        <caption class="w-full text-center inline-block select-none">
+        <caption class="inline-block select-none pt-2 italic">
           {{
             slide.title
           }}
@@ -23,17 +26,15 @@
 </section>
 
 <section
-  class="bg-b2b-tailoring bg-cover laptop:content-center laptop:text-center laptop:h-svh"
+  class="bg-b2b-tailoring bg-cover content-center text-center laptop:h-svh"
 >
   <h2>Звуковые модули</h2>
   <p>Как сделать так, чтобы твоя продукция запомнилась?</p>
   <p>Добавь ей голос или короткий слоган!</p>
 </section>
 
-<section
-  class="hero overflow-hidden bg-peasant-gradient"
->
-  <div class="stats stats-vertical laptop:stats-horizontal laptop:shadow">
+<section class="hero overflow-hidden bg-peasant-gradient">
+  <div class="stats stats-vertical laptop:stats-horizontal laptop:shadow my-8 text-wrap">
     <div class="stat">
       <div class="stat-title">Минимальный заказ</div>
       <div class="stat-value">10 штук</div>
@@ -43,7 +44,7 @@
       <div class="stat-title">Бесплатный прототип</div>
       <div class="stat-value">за 7 дней</div>
       <div class="stat-desc">
-        Предоставляем прототип за 7 дней с момента первого звонка.
+        Предоставляем прототип за 7 дней.
       </div>
     </div>
     <div class="stat">
@@ -51,7 +52,7 @@
       <div class="stat-value">до 15%</div>
       <div class="stat-desc">Выгодные цены на продукцию и скидки за объём.</div>
     </div>
-    <div class="stat laptop:hidden">
+    <div class="stat laptop:hidden desktop:block">
       <div class="stat-title">Цена</div>
       <div class="stat-value">0 ₽</div>
       <div class="stat-desc">Эскиз будущего изделия бесплатно.</div>
@@ -60,19 +61,18 @@
 </section>
 
 <section
-  class="mobile:flex mobile:flex-col-reverse laptop:grid laptop:grid-cols-2"
+  class="flex flex-col-reverse laptop:grid laptop:grid-cols-2 laptop:grid-rows-4"
 >
-  <app-order></app-order>
+  <app-order class="row-span-4"></app-order>
   <div
-    class="flex flex-col self-center mobile:p-4 laptop:pr-24 mobile:order-last"
+    *ngFor="let step of steps; index as i"
+    class="flex flex-row items-baseline py-2 mb-4 hover:bg-black hover:rounded hover:text-secondary group select-none"
   >
-    <div *ngFor="let step of steps; index as i" class="flex flex-row items-baseline mb-4 hover:bg-black hover:rounded hover:text-secondary group">
-      <span class="hidden desktop:inline content-center mask mask-hexagon p-4 mx-2 bg-info text-secondary text-bold group-hover:bg-success group-hover:text-primary">{{
-        i + 1
-      }}</span>
-      <h3 class="mr-2">{{ step.title }}</h3>
-      <p class="text-center py-4">{{ step.content }}</p>
-      
-    </div>
+    <span
+      class="hidden desktop:inline content-center mask mask-hexagon p-4 ml-4 bg-info text-secondary text-bold group-hover:bg-success group-hover:text-primary"
+      >{{ i + 1 }}</span
+    >
+    <h3 class="mr-4">{{ step.title }}</h3>
+    <p class="text-center py-4">{{ step.content }}</p>
   </div>
 </section>

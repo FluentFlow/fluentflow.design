@@ -61,9 +61,9 @@ export class TailoringB2bComponent implements OnDestroy {
     this.swiper = this.swiperRef?.nativeElement.swiper;
 
     // hack for swiper loop
-    this.swiperSubscription = interval(3000)
+    this.swiperSubscription = interval(5000)
       .subscribe(() => {
-        if (this.swiper?.activeIndex === 3) {
+        if (this.swiper?.activeIndex === 4) {
           return this.swiper?.slideTo(0);
         }
         return this.swiper?.slideNext();
@@ -82,10 +82,10 @@ export class TailoringB2bComponent implements OnDestroy {
         slidesPerView: 1.0,
       },
       1024: {
-        slidesPerView: 4.0,
+        slidesPerView: 3.0,
       },
       1280: {
-        slidesPerView: 4.0,
+        slidesPerView: 3.0,
       },
     },
     observer: true,
