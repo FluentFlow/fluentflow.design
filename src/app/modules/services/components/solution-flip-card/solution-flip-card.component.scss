@@ -1,0 +1,22 @@
+#flip-card{
+  @apply my-8;
+  @apply h-96;
+}
+
+#front, #back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @apply w-full;
+  @apply h-full;
+}
+
+#back {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotateY(180deg);
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}

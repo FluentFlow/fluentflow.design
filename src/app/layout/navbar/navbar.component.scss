@@ -2,6 +2,13 @@ a{
     @apply m-2;
 }
 
+.nav-item{
+    @apply m-2;
+    @apply hover:bg-secondary;
+    @apply p-2;
+    @apply rounded;
+}
+
 .navbar-start{
     @apply items-center;
 }

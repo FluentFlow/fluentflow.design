@@ -1,45 +1,36 @@
-<div class="laptop:container laptop:mx-auto text-right">
-  <span class="text-primary">ВК: </span>
-  <a
-    href="https://vk.com/fluentflow.merch"
-    target="_blank"
-    class="btn btn-info text-secondary"
-    >Мерч</a
-  >
-  <span class="text-primary">Telegram: </span>
-  <a
-    href="https://t.me/fluentflow"
-    target="_blank"
-    class="btn btn-info text-secondary"
-    >@fluentflow</a
-  >
-</div>
-
-<div class="navbar bg-base-200">
-  <div class="laptop:container laptop:mx-auto pl-2">
-    <div class="navbar-start flex gap-2">
+<header class="navbar bg-transparent container">
+    <div class="navbar-start flex">
+      <!-- Главная -->
+      <a class="nav-item" routerLink="/">Главная</a>
+      <!-- Пошив мерча -->
+      <a class="nav-item" routerLink="/tailoring-b2b">Мерч</a>
+      <!-- Прайслист -->
+      <a class="nav-item" routerLink="/services">Услуги</a>
+    </div>
+    <div class="navbar-end text-right">
       <!-- Меню -->
-      <div class="dropdown" [class.open]="dropdownOpen">
+      <div class="dropdown dropdown-end nav-item" [class.open]="dropdownOpen">
         <label
           class="flex items-center gap-1"
           tabindex="0"
           (click)="toggleDropdown()"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h7"
-            />
-          </svg>
-          <span class="inline">Меню</span>
+        <span class="inline">Меню</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h7"
+          />
+        </svg>
+          
         </label>
         <ul
           *ngIf="dropdownOpen"
@@ -47,19 +38,13 @@
           class="menu menu-sm dropdown-content shadow bg-base-100 rounded-box w-52"
         >
           <li><a routerLink="/" (click)="closeDropdown()">Главная</a></li>
-          <li><a routerLink="/cases" (click)="closeDropdown()">Кейсы</a></li>
+          <li><a routerLink="/services" (click)="closeDropdown()">Услуги</a></li>
           <li>
             <a routerLink="/tailoring-b2b" (click)="closeDropdown()"
               >Пошив игрушек на заказ</a
             >
           </li>
-          <li><a routerLink="/team" (click)="closeDropdown()">О команде (в разработке)</a></li>
         </ul>
       </div>
-      <!-- Главная -->
-      <a class="hover:bg-secondary p-2 rounded" routerLink="/">Главная</a>
-      <!-- Пошив мерча -->
-      <a class="hover:bg-secondary p-2 rounded" routerLink="/tailoring-b2b">Мерч</a>
     </div>
-  </div>
-</div>
+</header>

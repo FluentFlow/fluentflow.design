@@ -1,9 +1,9 @@
-<section class="laptop:container laptop:mx-auto p-2">
+<section class="container p-2">
   
-  <h3 class="text-3xl font-bold">🐱‍👤 Наша команда</h3>
+  <h3 class="text-3xl font-bold">🕶️ Наша команда</h3>
 
-  <div class="my-8 text-base-100 w-full-md">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+  <div class="text-base-100 w-full-md">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
       <div
         *ngFor="let teamMember of teamMembers"
         class="group card card-side px-4 bg-primary hover:bg-base-100 easy-in-out duration-500"
@@ -15,14 +15,17 @@
         </div>
 
         <div class="card-body text-base-100 group-hover:text-primary group-hover:transition-all">
-          <h4 class="card-title">{{ teamMember.name }}</h4>
-          <p>{{ teamMember.role }}</p>
-          <app-icons-panel
-            [vk]="teamMember.icons.vk"
-            [telegram]="teamMember.icons.telegram"
-            [github]="teamMember.icons.github"
-            [behance]="teamMember.icons.behance"
-          ></app-icons-panel>
+          <strong class="card-title">{{ teamMember.name }}</strong>
+          <p class="p-0">{{ teamMember.role }}</p>
+          <div class="card-actions">
+            <app-icons-panel
+              [vk]="teamMember.icons.vk"
+              [telegram]="teamMember.icons.telegram"
+              [github]="teamMember.icons.github"
+              [behance]="teamMember.icons.behance"
+            ></app-icons-panel>
+          </div>
+          
         </div>
       </div>
     </div>

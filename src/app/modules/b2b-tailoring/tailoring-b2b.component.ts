@@ -84,7 +84,7 @@ export class TailoringB2bComponent implements OnDestroy {
       1024: {
         slidesPerView: 3.0,
       },
-      1280: {
+      1900: {
         slidesPerView: 3.0,
       },
     },

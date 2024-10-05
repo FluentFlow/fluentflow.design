@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconsModule } from './icons/icons.module';
@@ -9,10 +10,12 @@ import { NotFoundComponent } from './modules/not-found/not-found.component';
 import { DirectivesModule } from './directives/directives.module';
 import { B2bTailoringModule } from './modules/b2b-tailoring/b2b-tailoring.module';
 
+
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     LayoutModule,
     SharedModule,

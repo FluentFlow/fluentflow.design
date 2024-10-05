@@ -15,6 +15,13 @@ import { OrderComponent } from './components/order/order.component';
       {
         path: '',
         component: TailoringB2bComponent,
+        data: {
+          breadcrumb: {
+            label: 'Пошив на заказ',
+            link: 'b2b-tailoring',
+            icon: 'fas fa-tshirt'
+          },
+        }
       }
     ]),
     DirectivesModule

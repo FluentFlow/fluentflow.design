@@ -1,0 +1,18 @@
+<div class="breadcrumbs mobile:block hidden">
+  <ul class="flex space-x-2">
+    <li *ngFor="let breadcrumb of breadcrumbs; let last = last">
+      <ng-container *ngIf="!last; else lastBreadcrumb">
+        <a [routerLink]="breadcrumb.link" class="flex items-center">
+          <i [class]="breadcrumb.icon" class="mr-1"></i> 
+          {{ breadcrumb.label }}
+        </a>
+      </ng-container>
+      <ng-template #lastBreadcrumb>
+        <span id="last" @fadeOut class="flex items-center">
+          <i [class]="breadcrumb.icon" class="mr-1"></i>
+          {{ breadcrumb.label }}
+        </span>
+      </ng-template>
+    </li>
+  </ul>
+</div>

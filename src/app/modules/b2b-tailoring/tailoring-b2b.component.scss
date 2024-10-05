@@ -1,16 +1,3 @@
-li{
-    @apply pb-4;
-}
-
-swiper-slide{
-    margin-bottom: 2rem;
-}
-
-section{
-    @apply py-8;
-    
-}
-
 .bg-king-gradient{
     @apply bg-gradient-to-r; 
     @apply from-secondary; 
@@ -22,48 +9,3 @@ section{
     @apply from-success; 
     @apply to-secondary;
 }
-
-h1,h2,h3{
-    @apply px-4;
-    @apply py-2;
-}
-
-h1{
-    @apply font-bold;
-    @apply text-3xl;
-    @apply py-6;
-}
-
-h2{
-    @apply font-bold;
-    @apply text-2xl;
-}
-
-h3{
-    @apply text-2xl;
-    @apply text-left;
-}
-
-.stat-desc{
-    @apply pt-2;
-}
-
-
-@screen laptop {
-    h1{
-        @apply text-3xl;
-    }
-}
-
-@screen desktop {
-    h1{
-        @apply text-5xl;
-        @apply pb-16;
-    }
-
-    
-}
-
-
-
-

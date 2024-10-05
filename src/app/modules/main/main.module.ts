@@ -19,7 +19,11 @@ class ResitasRedirectComponent {
     CommonModule,
     SharedModule,
     RouterModule.forChild([
-      { path: '', component: MainComponent },
+      { 
+        path: '', 
+        component: MainComponent 
+      
+      },
       {
         path: 'rechitas',
         component: ResitasRedirectComponent

@@ -6,6 +6,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  
+
   dropdownOpen = false;
 
   toggleDropdown() {

@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'team',
     loadChildren: () => import('./modules/team/team.module').then(m => m.TeamModule)
   },
+  {
+    path: 'services',
+    loadChildren: () => import('./modules/services/services.module').then(m => m.ServicesModule)
+  },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 ];

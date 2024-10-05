@@ -1,0 +1,21 @@
+<div id="flip-card" class="group" (click)="toggleFlip()">
+  <div [@flipState]="flipState" class="relative h-full w-full transition-transform duration-500 transform-style">
+    <div id="front">
+      <img
+        *ngIf="service.imageUrl"
+        [src]="service.imageUrl"
+        [alt]="service.name"
+        class="object-cover cursor-pointer h-full w-full"
+      />
+    </div>
+    <div id="back" class="bg-black/80 text-slate-200 ">
+      <div class="flex min-h-full flex-col items-center justify-center">
+        <h3>{{ service.name }}</h3>
+        <p class="text-lg text-pretty mb-4">{{ service.description }}</p>
+
+        <!-- Service prices -->
+        <!-- Call to action -->
+      </div>
+    </div>
+  </div>
+</div>
